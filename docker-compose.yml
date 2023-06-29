@@ -2,7 +2,7 @@ version: '3.8'
 services:
   vprodb:
     build: 
-    contex: ./Docker-files/db
+      contex: ./Docker-files/db
     image: rpgdev/vprofiledb
     container_name: vprodb
     ports:
@@ -27,7 +27,7 @@ services:
 
   vproapp:
     build: 
-    contex: ./Docker-files/app
+      contex: ./Docker-files/app
     image: rpgdev/vprofileapp
     container_name: vproapp
     ports:
@@ -36,8 +36,8 @@ services:
       - vproappdata:/usr/local/tomcat/webapps
 
   vproweb:
-    build: 
-    contex: ./Docker-files/web
+    build:
+      contex: ./Docker-files/web
     image: rpgdev/vprofileweb
     container_name: vproweb
     ports:
